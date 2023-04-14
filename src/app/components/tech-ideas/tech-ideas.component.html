@@ -1,0 +1,76 @@
+<app-tech-ideas></app-tech-ideas>
+<div>
+   <h1>Innovative Ideas</h1>
+</div>
+
+<form [formGroup]="techIdeasForm" class="myForm">
+    <div>
+        <label for="Username">Name</label>
+        <input type="text" id="username" formControlName="name">
+    </div>
+
+    <span *ngIf="name!.touched && name!.errors?.['required']">
+        Please enter your name</span
+      >
+
+      <span *ngIf="name!.dirty && name!.errors?.['minlength']">
+        The name field must be at least 2 characters</span
+      >
+      <span *ngIf="name!.dirty && name!.errors?.['prohibitedWords']">
+        Your name can't contain the words "tourist" or "nothing"</span
+      >
+    
+    <br />
+
+    <div>
+        <label for="Useremail">E-mail</label>
+        <input type="email" id="useremail" formControlName="email">
+    </div>
+
+    <span *ngIf="email!.touched && email!.errors?.['required']">
+        Please enter your email</span
+      >
+    <br />
+
+    <div>
+        <label for="UserAge">Age</label>
+        <input type="number" id="userage" formControlName="age">
+    </div>
+
+    <span *ngIf="age!.touched && age!.errors?.['required']">
+        Please enter your age</span
+      >
+    <br />
+
+    <div>
+        <label for="targetcity">City</label>
+        <select id="targetcity" formControlName="city">
+            <option value="{{city}}" *ngFor="let city of cities">{{city}}</option>
+        </select>
+
+        <span *ngIf="city!.touched && city!.errors?.['required']">
+            Please select a city</span
+          >
+
+    </div>
+    <br />
+
+    <div>
+        <label for="idea">Brief description about your idea</label>
+        <textarea  id="brief" cols="50" rows="4" formControlName="idea"></textarea>
+    </div>
+
+    <span class="d-block" *ngIf="idea!.dirty && idea!.errors?.['minlength']">
+        Your description must be at least 100 characters</span
+      >
+  
+      <span *ngIf="idea!.dirty && idea!.errors?.['prohibitedWords']">
+        Your idea description can't contain the word "nothing"</span
+      >
+
+    <br />
+
+    <button type ="submit">Submit</button>
+
+
+</form>

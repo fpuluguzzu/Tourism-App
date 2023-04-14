@@ -1,0 +1,14 @@
+footer{
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: #cf760b;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+p{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

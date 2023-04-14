@@ -1,0 +1,15 @@
+<div class="container">
+    <!--<div class="card mb-4 d-grid col-md-24 col-lg-6 mx auto">-->
+        <div *ngFor="let city of cities">
+            <a [routerLink]="['/cities', city.name]"
+                [ngClass]="{'green-text': city.attractions.length > 2}">{{city.name}}</a>
+       
+
+
+        <ul *ngFor="let attraction of city.attractions">
+            <li class="list-item">{{attraction}}</li>
+
+        </ul>
+    </div>
+
+</div>

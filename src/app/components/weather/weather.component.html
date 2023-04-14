@@ -1,0 +1,21 @@
+
+
+<div  class="container"   *ngFor="let weather of citiesWeather">
+
+    <h5>{{ weather.name}}</h5>
+    <a [routerLink]="[
+'/weather',
+weather.springN,
+weather.springM,
+weather.summerN,
+weather.summerM,
+weather.winterN,
+weather.winterM,
+weather.autumnN,
+weather.autumnM,
+weather.visitFrom,
+weather.visitTo,
+
+]" class="button">Check weather </a>
+
+</div>

@@ -1,0 +1,48 @@
+
+
+<div>
+    <p>Yearly weather in {{name}}</p>
+</div>
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Spring</th>
+                <th>Summer</th>
+                <th>Winter</th>
+                <th>Autumn</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                
+                <td>Spring Morning</td>
+                <td>Spring Night</td>
+                <td>Summer Morning</td>
+                <td>Summer Night</td>
+                <td>Winter Morning</td>
+                <td>Winter Night</td>
+                <td>Autumn Morning</td>
+                <td>Autumn Night</td>
+            </tr>
+
+            <tr>
+                <td>{{ springM | number }} °C</td>
+                <td>{{ springN | number }} °C</td>
+                <td>{{ summerM | number }} °C</td>
+                <td>{{ summerN | number }} °C</td>
+                <td>{{ winterM | number }} °C</td>
+                <td>{{ winterN | number }} °C</td>
+                <td>{{ autumnM | number }} °C</td>
+                <td>{{ autumnN | number }} °C</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <span>
+        Tourists love to visit {{name}} between {{ visitFrom}} and {{ visitTo}}
+    </span>
+</div>

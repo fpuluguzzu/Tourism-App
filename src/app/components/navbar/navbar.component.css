@@ -1,0 +1,51 @@
+* {
+
+    padding: 0;
+    text-decoration: none;
+}
+
+header {
+    padding: 10px 0;
+    background: black;
+
+}
+
+.logo {
+    color: #cf760b;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 80px;
+    padding: 0 60px;
+
+}
+
+.menu a {
+    color: #cf760b;
+    font-size: 20px;
+    margin-left: 40px;
+    line-height: 80px;
+    font-weight: bold;
+
+}
+
+.menu {
+    margin-top: 5px;
+}
+
+.menu a:hover {
+    color: blue;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+@media only screen and (mac-width: 600px) {
+    .menu {
+        position: absolute;
+        right: 0px;
+        top: 64px;
+        width: 200px;
+        height: 100%;
+    }
+
+}
